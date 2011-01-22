@@ -1,0 +1,1 @@
+CREATE TABLE object (id INTEGER PRIMARY KEY AUTOINCREMENT, number INTEGER, description TEXT, name VARCHAR(255), origin VARCHAR(255), date VARCHAR(255), img_link VARCHAR(255), wp_link VARCHAR(255), bbc_link VARCHAR(255), bm_link VARCHAR(255), audio_link VARCHAR(255), transcript VARCHAR(255), floor INTEGER, room VARCHAR(255));

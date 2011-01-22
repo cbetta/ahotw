@@ -1,0 +1,6 @@
+apps/frontend/config/app.yml
+apps/frontend/config/settings.yml
+config/databases.yml
+config/properties.ini
+log/*
+cache/*

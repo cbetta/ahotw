@@ -1,0 +1,20 @@
+options:
+  type: InnoDB
+  collate: utf8_unicode_ci
+  charset: utf8
+
+Object:
+    columns:
+        number:       { type: integer }
+        description:  { type: text }
+        name:         { type: varchar(255) }
+        origin:       { type: varchar(255) }
+        date:         { type: varchar(255) }
+        img_link:     { type: varchar(255) }
+        wp_link:      { type: varchar(255) }
+        bbc_link:     { type: varchar(255) }
+        bm_link:      { type: varchar(255) }
+        audio_link:   { type: varchar(255) }
+        transcript:   { type: varchar(255) }
+        floor:        { type: integer }
+        room:         { type: varchar(255) }
