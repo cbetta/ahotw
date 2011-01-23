@@ -11,15 +11,13 @@
 			<h4><a href="<?php echo url_for('@map?location='.$object->getFloor()); ?>" data-rel="dialog" data-transition="slideup">
 				<?php echo $object->getFloor().", ".$object->getRoom() ?>
 			</a></h4>
+			
+			<p><audio src="<?php echo $object->getAudioLink(); ?>" controls preload='none'>Play</audio></p>
+			
 			<img src='<?php echo $object->getImgLink() ?>' class='left' /> 
 			<p><?php echo $object->getDescription() ?></p>
 		</div>
 		<ul data-role="listview" data-theme="c" data-inset="true">
-				<li>
-					<h4><a href='<?php echo $object->getAudioLink(); ?>'>
-						Podcast Episode #<?php echo $object->getNumber(); ?>
-					</a></h4>				
-				</li>
 				<li>
 					<h4><a href='<?php echo url_for('@mobile_transcript?number='.$object->getNumber()) ?>'>
 					  Podcast Transcript

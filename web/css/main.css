@@ -11,3 +11,13 @@
 #map img {
 	width: 100%;
 }
+
+#index .ui-content {
+	background-color: #e0ecf7;
+}
+
+#index .header {
+	position: relative;
+	top: -15px;
+	left: -15px;
+}

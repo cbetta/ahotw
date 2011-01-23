@@ -1,0 +1,4 @@
+all:
+    enabled:     on
+    with_layout: true   
+    lifetime:    31536000   # A year

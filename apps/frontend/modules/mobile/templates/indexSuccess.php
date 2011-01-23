@@ -1,11 +1,8 @@
 <!-- Start of first page -->
 <div data-role="page" id="index">
 
-	<div data-role="header">
-		<h1>AHOTW Mobile</h1>
-	</div>
-
 	<div data-role="content">	
+		<img src='/images/header.png' class='header' />
 		<ol data-role="listview" data-theme="c" data-filter='true'>
 			<?php foreach($objects as $object) : ?>
 				<li>

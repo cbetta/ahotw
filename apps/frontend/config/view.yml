@@ -6,11 +6,11 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
-    #description:  symfony project
-    #keywords:     symfony, project
-    #language:     en
-    #robots:       index, follow
+    title:        A History of the World in 100 Objects - Mobile
+    description:  A mobile version of the "A History of the World in 100 Objects" site
+    keywords:     hotw, history of the world, british museum, bbc, 100 objects, museum
+    language:     en
+    robots:       index, follow
 
   stylesheets:    [main.css]
 
