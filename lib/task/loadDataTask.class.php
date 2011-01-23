@@ -100,7 +100,7 @@ EOF;
 		$this->logSection('Parsing', 'Name: '.$object->getName());
 		
 		if ($cell->firstChild()) {
-			$object->setWpLink("http://en.wikipedia.org/wiki".$cell->firstChild()->href);
+			$object->setWpLink("http://en.wikipedia.org".$cell->firstChild()->href);
 			$this->logSection('Parsing', 'WP Link: '.$object->getWpLink());
 		}
 	}
@@ -110,7 +110,7 @@ EOF;
 		$this->logSection('Parsing', 'Origin: '.$object->getOrigin());
 		
 		if ($cell->firstChild()) {
-			$object->setOriginLink("http://en.wikipedia.org/wiki".$cell->firstChild()->href);
+			$object->setOriginLink("http://en.wikipedia.org".$cell->firstChild()->href);
 			$this->logSection('Parsing', 'Origin Link: '.$object->getOriginLink());
 		}
 	}

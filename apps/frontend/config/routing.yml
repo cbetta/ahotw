@@ -6,14 +6,31 @@ object:
     prefix_path:          /object
     column:               id
     with_wildcard_routes: true
+    
+mobile:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Object
+    module:               mobile
+    prefix_path:          /mobile
+    column:               number
+    with_wildcard_routes: true
+    
+mobile_transcript:
+    url:   /mobile/:number/transcript
+    param: { module: mobile, action: transcript }
 
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+map:
+  url:   /map/:location
+  param: { module: map, action: show } 
+
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: homepage, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

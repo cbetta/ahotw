@@ -17,6 +17,19 @@ class mobileActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+		$this->objects = $this->getRoute()->getObjects();
+		sfConfig::set('sf_web_debug', false);
   }
+
+	public function executeShow(sfWebRequest $request) {
+		$this->object = $this->getRoute()->getObject();
+		sfConfig::set('sf_web_debug', false);
+		
+	}
+	
+	public function executeTranscript(sfWebRequest $request) {
+		$this->object = $this->getRoute()->getObject();
+		sfConfig::set('sf_web_debug', false);
+		
+	}
 }

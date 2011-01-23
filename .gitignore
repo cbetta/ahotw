@@ -5,3 +5,4 @@ config/properties.ini
 log/*
 cache/*
 data/dev.db
+web/objects/*
