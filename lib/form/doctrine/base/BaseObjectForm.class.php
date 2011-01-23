@@ -22,6 +22,7 @@ abstract class BaseObjectForm extends BaseFormDoctrine
       'origin'      => new sfWidgetFormInputText(),
       'date'        => new sfWidgetFormInputText(),
       'img_link'    => new sfWidgetFormInputText(),
+      'origin_link' => new sfWidgetFormInputText(),
       'wp_link'     => new sfWidgetFormInputText(),
       'bbc_link'    => new sfWidgetFormInputText(),
       'bm_link'     => new sfWidgetFormInputText(),
@@ -39,12 +40,13 @@ abstract class BaseObjectForm extends BaseFormDoctrine
       'origin'      => new sfValidatorPass(array('required' => false)),
       'date'        => new sfValidatorPass(array('required' => false)),
       'img_link'    => new sfValidatorPass(array('required' => false)),
+      'origin_link' => new sfValidatorPass(array('required' => false)),
       'wp_link'     => new sfValidatorPass(array('required' => false)),
       'bbc_link'    => new sfValidatorPass(array('required' => false)),
       'bm_link'     => new sfValidatorPass(array('required' => false)),
       'audio_link'  => new sfValidatorPass(array('required' => false)),
       'transcript'  => new sfValidatorPass(array('required' => false)),
-      'floor'       => new sfValidatorInteger(array('required' => false)),
+      'floor'       => new sfValidatorPass(array('required' => false)),
       'room'        => new sfValidatorPass(array('required' => false)),
     ));
 

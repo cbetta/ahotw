@@ -71,8 +71,8 @@ class Addobject extends Doctrine_Migration_Base
              ),
              'floor' => 
              array(
-              'type' => 'integer',
-              'length' => 8,
+              'type' => 'varchar',
+              'length' => 255,
              ),
              'room' => 
              array(

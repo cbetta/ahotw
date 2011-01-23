@@ -19,6 +19,7 @@ abstract class BaseObjectFormFilter extends BaseFormFilterDoctrine
       'origin'      => new sfWidgetFormFilterInput(),
       'date'        => new sfWidgetFormFilterInput(),
       'img_link'    => new sfWidgetFormFilterInput(),
+      'origin_link' => new sfWidgetFormFilterInput(),
       'wp_link'     => new sfWidgetFormFilterInput(),
       'bbc_link'    => new sfWidgetFormFilterInput(),
       'bm_link'     => new sfWidgetFormFilterInput(),
@@ -35,12 +36,13 @@ abstract class BaseObjectFormFilter extends BaseFormFilterDoctrine
       'origin'      => new sfValidatorPass(array('required' => false)),
       'date'        => new sfValidatorPass(array('required' => false)),
       'img_link'    => new sfValidatorPass(array('required' => false)),
+      'origin_link' => new sfValidatorPass(array('required' => false)),
       'wp_link'     => new sfValidatorPass(array('required' => false)),
       'bbc_link'    => new sfValidatorPass(array('required' => false)),
       'bm_link'     => new sfValidatorPass(array('required' => false)),
       'audio_link'  => new sfValidatorPass(array('required' => false)),
       'transcript'  => new sfValidatorPass(array('required' => false)),
-      'floor'       => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'floor'       => new sfValidatorPass(array('required' => false)),
       'room'        => new sfValidatorPass(array('required' => false)),
     ));
 
@@ -68,12 +70,13 @@ abstract class BaseObjectFormFilter extends BaseFormFilterDoctrine
       'origin'      => 'Text',
       'date'        => 'Text',
       'img_link'    => 'Text',
+      'origin_link' => 'Text',
       'wp_link'     => 'Text',
       'bbc_link'    => 'Text',
       'bm_link'     => 'Text',
       'audio_link'  => 'Text',
       'transcript'  => 'Text',
-      'floor'       => 'Number',
+      'floor'       => 'Text',
       'room'        => 'Text',
     );
   }

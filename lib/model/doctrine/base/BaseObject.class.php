@@ -11,12 +11,13 @@
  * @property varchar $origin
  * @property varchar $date
  * @property varchar $img_link
+ * @property varchar $origin_link
  * @property varchar $wp_link
  * @property varchar $bbc_link
  * @property varchar $bm_link
  * @property varchar $audio_link
  * @property varchar $transcript
- * @property integer $floor
+ * @property varchar $floor
  * @property varchar $room
  * 
  * @method integer getNumber()      Returns the current record's "number" value
@@ -25,12 +26,13 @@
  * @method varchar getOrigin()      Returns the current record's "origin" value
  * @method varchar getDate()        Returns the current record's "date" value
  * @method varchar getImgLink()     Returns the current record's "img_link" value
+ * @method varchar getOriginLink()  Returns the current record's "origin_link" value
  * @method varchar getWpLink()      Returns the current record's "wp_link" value
  * @method varchar getBbcLink()     Returns the current record's "bbc_link" value
  * @method varchar getBmLink()      Returns the current record's "bm_link" value
  * @method varchar getAudioLink()   Returns the current record's "audio_link" value
  * @method varchar getTranscript()  Returns the current record's "transcript" value
- * @method integer getFloor()       Returns the current record's "floor" value
+ * @method varchar getFloor()       Returns the current record's "floor" value
  * @method varchar getRoom()        Returns the current record's "room" value
  * @method Object  setNumber()      Sets the current record's "number" value
  * @method Object  setDescription() Sets the current record's "description" value
@@ -38,6 +40,7 @@
  * @method Object  setOrigin()      Sets the current record's "origin" value
  * @method Object  setDate()        Sets the current record's "date" value
  * @method Object  setImgLink()     Sets the current record's "img_link" value
+ * @method Object  setOriginLink()  Sets the current record's "origin_link" value
  * @method Object  setWpLink()      Sets the current record's "wp_link" value
  * @method Object  setBbcLink()     Sets the current record's "bbc_link" value
  * @method Object  setBmLink()      Sets the current record's "bm_link" value
@@ -78,6 +81,10 @@ abstract class BaseObject extends sfDoctrineRecord
              'type' => 'varchar',
              'length' => 255,
              ));
+        $this->hasColumn('origin_link', 'varchar', 255, array(
+             'type' => 'varchar',
+             'length' => 255,
+             ));
         $this->hasColumn('wp_link', 'varchar', 255, array(
              'type' => 'varchar',
              'length' => 255,
@@ -98,8 +105,9 @@ abstract class BaseObject extends sfDoctrineRecord
              'type' => 'varchar',
              'length' => 255,
              ));
-        $this->hasColumn('floor', 'integer', null, array(
-             'type' => 'integer',
+        $this->hasColumn('floor', 'varchar', 255, array(
+             'type' => 'varchar',
+             'length' => 255,
              ));
         $this->hasColumn('room', 'varchar', 255, array(
              'type' => 'varchar',

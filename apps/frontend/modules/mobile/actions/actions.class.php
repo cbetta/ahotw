@@ -1,14 +1,14 @@
 <?php
 
 /**
- * fetcher actions.
+ * mobile actions.
  *
  * @package    hotw100
- * @subpackage fetcher
+ * @subpackage mobile
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class fetcherActions extends sfActions
+class mobileActions extends sfActions
 {
  /**
   * Executes index action

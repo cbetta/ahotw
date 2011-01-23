@@ -11,10 +11,11 @@ Object:
         origin:       { type: varchar(255) }
         date:         { type: varchar(255) }
         img_link:     { type: varchar(255) }
+        origin_link:  { type: varchar(255) }
         wp_link:      { type: varchar(255) }
         bbc_link:     { type: varchar(255) }
         bm_link:      { type: varchar(255) }
         audio_link:   { type: varchar(255) }
         transcript:   { type: varchar(255) }
-        floor:        { type: integer }
+        floor:        { type: varchar(255) }
         room:         { type: varchar(255) }
