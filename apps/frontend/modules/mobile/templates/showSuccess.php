@@ -1,7 +1,7 @@
 <!-- Start of first page -->
 <div data-role="page" id="show">
 
-	<div data-role="header">
+	<div data-role="header" data-theme='b'>
 		<h1><?php echo $object->getName() ?></h1>
 	</div>
 
@@ -12,7 +12,16 @@
 				<?php echo $object->getFloor().", ".$object->getRoom() ?>
 			</a></h4>
 			
-			<p><audio src="<?php echo $object->getAudioLink(); ?>" controls preload='none'>Play</audio></p>
+			<p>
+				<object type="application/x-shockwave-flash" id="audioplayer1" data="/flash/player.swf?soundFile=<?php echo urlencode($object->getAudioLink()); ?>&amp;playerID=1" width="290" height="24"> 
+				<param name="movie" value="/flash/player.swf?soundFile=<?php echo $object->getAudioLink(); ?>"> 
+				<param name="quality" value="high"> 
+				<param name="menu" value="false"> 
+				<param name="wmode" value="transparent"> 
+				<audio src="<?php echo $object->getAudioLink(); ?>" controls preload='none'>Play</audio>
+
+				</object>
+			</p>
 			
 			<img src='<?php echo $object->getImgLink() ?>' class='left' /> 
 			<p><?php echo $object->getDescription() ?></p>
