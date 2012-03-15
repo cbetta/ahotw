@@ -17,7 +17,7 @@ class homepageActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-		$this->redirect('@mobile');
+		$this->redirect('/mobile');
   }
 
 
