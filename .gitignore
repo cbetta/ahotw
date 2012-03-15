@@ -5,4 +5,6 @@ config/properties.ini
 log/*
 cache/*
 data/dev.db
+Capfile
+config/deploy.rb
 web/objects/*
