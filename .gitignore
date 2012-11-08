@@ -8,3 +8,4 @@ data/dev.db
 Capfile
 config/deploy.rb
 web/objects/*
+.DS_Store
