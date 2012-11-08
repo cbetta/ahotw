@@ -23,7 +23,6 @@ module Importer
           @artifact.origin              = cells[3].text
           @artifact.origin_url          = parse_wikipedia_url(cells[3])
           @artifact.bbc_url             = parse_url(cells[5])
-          # @artifact.british_museum_url  = parse_url(cells[6])
           @artifact.date                = cells[4].text
 
           @artifact.save!
@@ -32,11 +31,11 @@ module Importer
     end
 
     def parse_image_url cell
-      cell.css("img").first ? "http"+cell.css("img").first["src"] : nil
+      cell.css("img").first ? "http:"+cell.css("img").first["src"] : nil
     end
 
     def parse_wikipedia_url cell
-      cell.css("a").first ? "http//en.wikipedia.org"+cell.css("a").first["href"] : nil
+      cell.css("a").first ? "http://en.wikipedia.org"+cell.css("a").first["href"] : nil
     end
 
     def parse_url cell

@@ -1,0 +1,24 @@
+<div data-role="page" id="index">
+  <div data-role="content">
+    <%= image_tag("header.png", class: "header") %>
+    <ul data-role="listview" data-theme="c" data-filter='true'>
+      <% Artifact.order(:number).each do |artifact| %>
+        <li>
+          <a href='/artifacts/<%= artifact.number %>'>
+            <img src='/objects/<%= artifact.number %>.jpg' />
+            <h4>
+              <%= artifact.number %>. <%= artifact.name %>
+            </h4>
+            <p>
+              <strong>
+                <%= "#{artifact.floor}," if artifact.floor %> <%= "Room#{"s" if artifact.room.include? "-"} #{artifact.room}" if artifact.room %>
+              </strong>
+            </p>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+

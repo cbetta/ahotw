@@ -1,0 +1,23 @@
+#show img.left {
+  float: left;
+  margin: 0px 20px 20px 0px;
+}
+
+#show div.overflow {
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+#map img {
+  width: 100%;
+}
+
+#index .ui-content {
+  background-color: #e0ecf7;
+}
+
+#index .header {
+  position: relative;
+  top: -11px;
+  left: -11px;
+}

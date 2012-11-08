@@ -10,6 +10,7 @@ gem 'faraday_middleware',       '0.9.0'
 gem 'awesome_print',            '1.1.0'
 gem 'jquery-rails',             '2.1.3'
 gem 'nokogiri',                 '1.5.5'
+gem 'mini_magick',              '3.4'
 
 group :assets do
   gem 'sass-rails',             '3.2.5'
