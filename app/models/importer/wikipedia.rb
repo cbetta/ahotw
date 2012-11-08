@@ -23,7 +23,7 @@ module Importer
           @artifact.origin              = cells[3].text
           @artifact.origin_url          = parse_wikipedia_url(cells[3])
           @artifact.bbc_url             = parse_url(cells[5])
-          @artifact.british_museum_url  = parse_url(cells[6])
+          # @artifact.british_museum_url  = parse_url(cells[6])
           @artifact.date                = cells[4].text
 
           @artifact.save!
