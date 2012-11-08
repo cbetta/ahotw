@@ -1,0 +1,15 @@
+<!-- Start of first page -->
+<div data-role="page" id="show">
+
+	<div data-role="header">
+		<h1><%= @artifact.name%> : Transcript</h1>
+	</div>
+
+	<div data-role="content">
+	  <%= @artifact.transcript.gsub("\n", "<br/><br/>").html_safe %>
+	</div>
+
+
+</div>
+
+

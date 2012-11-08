@@ -5,7 +5,7 @@ namespace :import do
     Rake::Task['import:bbc'].invoke
     Rake::Task['import:transcripts'].invoke
     Rake::Task['import:rooms'].invoke
-    Rake::Task['import:images'].invoke
+    # Rake::Task['import:images'].invoke
   end
 
   desc "Imports the data from Wikipedia"

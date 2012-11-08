@@ -9,9 +9,8 @@ module Importer
       Artifact.find_each do |artifact|
         url = TRANSCRIPT_BASE_URL % [artifact.number]
         doc = Nokogiri::HTML(open(url))
+        artifact.transcript = doc.css(".col-a p").map {|element| Iconv.conv("UTF-8//IGNORE", "US-ASCII", element.text).gsub("\n", "") }.join("\n")
 
-        transcript = doc.css(".col-a p").map {|element| element.text}.join("\n")
-        artifact.transcript = Iconv.conv("UTF-8//IGNORE", "US-ASCII", transcript)
         artifact.save!
       end
     end

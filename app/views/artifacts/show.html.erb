@@ -8,7 +8,7 @@
   <div data-role="content">
     <div class='overflow'>
       <h3><%= @artifact.origin %>, <%= @artifact.date %></h3>
-      <h4><a href="#" data-rel="dialog" data-transition="slideup">
+      <h4><a href="/maps/<%= @artifact.floor.downcase.gsub(" ", "_") %>" data-rel="dialog" data-transition="slideup">
         <%= "#{@artifact.floor}," if @artifact.floor %> <%= "Room#{"s" if @artifact.room.include? "-"} #{@artifact.room}" if @artifact.room %>
       </a></h4>
 
@@ -28,7 +28,7 @@
     </div>
     <ul data-role="listview" data-theme="c" data-inset="true">
         <li>
-          <h4><a href='#'>
+          <h4><a href='/transcripts/<%= @artifact.number %>' data-transition='slide'>
             Podcast Transcript
           </a></h4>
         </li>
