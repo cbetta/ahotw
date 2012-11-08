@@ -4,4 +4,8 @@ class ArtifactsController < ApplicationController
 
   end
 
+  def show
+    @artifact = Artifact.find_by_number(params[:id])
+  end
+
 end

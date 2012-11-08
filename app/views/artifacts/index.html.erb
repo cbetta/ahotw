@@ -4,7 +4,7 @@
     <ul data-role="listview" data-theme="c" data-filter='true'>
       <% Artifact.order(:number).each do |artifact| %>
         <li>
-          <a href='/artifacts/<%= artifact.number %>'>
+          <a href='/artifacts/<%= artifact.number %>' data-transition="slide">
             <img src='/objects/<%= artifact.number %>.jpg' />
             <h4>
               <%= artifact.number %>. <%= artifact.name %>
