@@ -11,7 +11,11 @@
             </h4>
             <p>
               <strong>
-                <%= "#{artifact.floor}," if artifact.floor %> <%= "Room#{"s" if artifact.room.include? "-"} #{artifact.room}" if artifact.room %>
+                <% if artifact.floor %>
+                  <%= "#{artifact.floor}" %>, <%= "Room#{"s" if artifact.room.include? "-"} #{artifact.room}" if artifact.room %>
+                <% else %>
+                  Currently not on display
+                <% end %>
               </strong>
             </p>
           </a>

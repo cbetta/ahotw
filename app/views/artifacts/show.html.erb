@@ -13,6 +13,8 @@
       <h4><a href="/maps/<%= @artifact.floor.downcase.gsub(" ", "_") %>" data-rel="dialog" data-transition="slideup">
         <%= "#{@artifact.floor}," if @artifact.floor %> <%= "Room#{"s" if @artifact.room.include? "-"} #{@artifact.room}" if @artifact.room %>
       </a></h4>
+      <% else %>
+      <h4>Currently not on display</h4>
       <% end %>
 
       <p>
