@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',                    '3.2.9'
+gem 'rails',                    '3.2.11'
 gem 'pg',                       '0.14.1'
 gem 'unicorn',                  '4.4.0'
 gem 'capistrano',               '2.13.5'
