@@ -8,4 +8,6 @@ Vagrant::Config.run do |config|
   config.vm.provision :puppet,
     :manifests_path => 'puppet/manifests',
     :module_path    => 'puppet/modules'
+
+  config.ssh.forward_agent = true
 end
