@@ -16,3 +16,4 @@
 /config/*.yml
 .DS_Store
 config/deploy.rb
+.vagrant
